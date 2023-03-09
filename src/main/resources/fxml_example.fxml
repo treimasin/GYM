@@ -11,38 +11,27 @@
     <padding>
         <Insets top="25" right="25" bottom="10" left="25"/>
     </padding>
-    <VBox spacing="20">
-        <Text>Car Search Result</Text>
-        <ListView fx:id="dataGrid">
+    <HBox spacing="20">
+        <VBox spacing="15">
+            <Label>Active client</Label>
+            <ListView fx:id="activeListView"></ListView>
+            <Button fx:id="checkOutButton">Check-out</Button>
+        </VBox>
 
-        </ListView>
+        <VBox spacing="15">
+            <Label>Registered clients</Label>
+            <ListView fx:id="registeredListView"></ListView>
+            <HBox spacing="60">
+                <Button fx:id="checkInButton">Check-in</Button>
+                <Button fx:id="deleteButton">Terminate Contract</Button>
+            </HBox>
+        </VBox>
 
-        <HBox spacing="15">
-            <Button fx:id="bwmSearch" text="BMW">
-
-            </Button>
-            <Button fx:id="audiSearch" text="AUDI">
-
-            </Button>
-
-            <Button fx:id="deleteButton">Delete</Button>
-
-        </HBox>
-        <HBox>
-            <VBox>
-                <Label>ID</Label>
-                <TextField fx:id="idTextField"></TextField>
-            </VBox>
-            <VBox>
-                <Label>Type</Label>
-                <TextField fx:id="typeTextField"></TextField>
-            </VBox>
-            <VBox>
-                <Label>Price</Label>
-                <TextField fx:id="priceTextField"></TextField>
-            </VBox>
+        <VBox spacing="15">
+            <Label>Queue</Label>
+            <ListView fx:id="queueListView"></ListView>
+        </VBox>
     </HBox>
-    <Button fx:id="addButton">[ Add ]</Button>
 
-    </VBox>
+
 </GridPane>

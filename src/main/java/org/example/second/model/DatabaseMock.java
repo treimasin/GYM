@@ -5,39 +5,15 @@ import java.util.List;
 
 public class DatabaseMock {
 
-    public List<Car> getAudi(){
-        List<Car> cars = new ArrayList<>();
-        Car car = new Car();
-        car.setId("3");
-        car.setPrice("20 000 EUR");
-        car.setType("AUDI");
-
-        Car car2 = new Car();
-        car2.setId("4");
-        car2.setPrice("10 000 USD");
-        car2.setType("AUDI");
-
-        cars.add(car);
-        cars.add(car2);
-
-        return cars;
+    public List<GymClient> loadClient(){
+        List<GymClient> list = new ArrayList<>();
+        list.add(new GymClient("Kristo", "Treiman", "12345"));
+        list.add(new GymClient("Rauno", "Kurg", "54321"));
+        list.add(new GymClient("Mauno", "Kaupo", "34512"));
+        list.add(new GymClient("Markus", "Tarkus", "31254"));
+        list.add(new GymClient("Ivo", "Tamm", "37435"));
+        list.add(new GymClient("Jaanus", "Albert", "64332"));
+        return list;
     }
 
-    public List<Car> getBwm(){
-        List<Car> cars = new ArrayList<>();
-        Car car = new Car();
-        car.setId("1");
-        car.setPrice("10 000 EUR");
-        car.setType("BMW");
-
-        Car car2 = new Car();
-        car2.setId("2");
-        car2.setPrice("20 000 USD");
-        car2.setType("BMW");
-
-        cars.add(car);
-        cars.add(car2);
-
-        return cars;
-    }
 }
