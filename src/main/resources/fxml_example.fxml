@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+          fx:controller="org.example.second.controller.FXMLExampleController">
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+    <VBox spacing="20">
+        <Text>Car Search Result</Text>
+        <ListView fx:id="dataGrid">
+
+        </ListView>
+
+        <HBox spacing="15">
+            <Button fx:id="bwmSearch" text="BMW">
+
+            </Button>
+            <Button fx:id="audiSearch" text="AUDI">
+
+            </Button>
+
+            <Button fx:id="deleteButton">Delete</Button>
+
+        </HBox>
+        <HBox>
+            <VBox>
+                <Label>ID</Label>
+                <TextField fx:id="idTextField"></TextField>
+            </VBox>
+            <VBox>
+                <Label>Type</Label>
+                <TextField fx:id="typeTextField"></TextField>
+            </VBox>
+            <VBox>
+                <Label>Price</Label>
+                <TextField fx:id="priceTextField"></TextField>
+            </VBox>
+    </HBox>
+    <Button fx:id="addButton">[ Add ]</Button>
+
+    </VBox>
+</GridPane>
